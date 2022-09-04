@@ -3,7 +3,6 @@ const users = require('./routers/usuarios.js');
 const home = require('./routers/home.js');
 const cors = require('cors');
 const app = express();
-const PORT = 8000;
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -17,6 +16,6 @@ app.use(express.static(__dirname+'/public'));
 app.use('/usuarios',users);
 app.use('/',home);
 
-app.listen(PORT, ()=>{
+app.listen(3000, ()=>{
     console.log("SERVIDOR ON!")
 })
